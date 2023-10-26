@@ -1,1 +1,2 @@
 # imagetotext
+python -m SimpleHTTPServer
