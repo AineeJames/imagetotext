@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binarize Image</title>
+    <style>
+      /* Add some basic styling here or link to an external CSS */
+    </style>
+  </head>
+  <body>
+    <div
+      id="dropzone"
+      style="
+        border: 2px dashed gray;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      Drop an image here
+    </div>
+    <input type="range" min="0" max="255" value="127" id="thresholdSlider" />
+    <label for="scaleSlider">Scale:</label>
+    <input type="range" min="1" max="10" value="5" id="scaleSlider" />
+
+    <canvas
+      id="originalCanvas"
+      width="300"
+      height="300"
+      style="border: 1px solid black"
+    ></canvas>
+    <canvas
+      id="binarizedCanvas"
+      width="300"
+      height="300"
+      style="border: 1px solid black"
+    ></canvas>
+    <pre
+      id="textRepresentation"
+      style="font-family: monospace; white-space: pre-wrap"
+    ></pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>
